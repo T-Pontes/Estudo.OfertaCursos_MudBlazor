@@ -10,8 +10,7 @@ public class Student : Entity
 
     [Required]
     [MaxLength(8)]
-    public string Enrollment { get; set; } = string.Empty;
+    public string StudentCode { get; set; } = string.Empty;
 
-
-    public ICollection<Class> Turmas { get; set; } = null!;
+    public ICollection<Enrollment> Enrollments { get; set; } = null!;
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Core.Entities;
 
@@ -11,6 +12,6 @@ public class Course : Entity
     [Required]
     public int Workload { get; set; }
 
-
-    public ICollection<Class> Turmas { get; set; } = null!;
+    [JsonIgnore]
+    public ICollection<Class> Classes { get; set; } = null!;
 }

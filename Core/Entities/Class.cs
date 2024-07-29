@@ -13,11 +13,9 @@ public class Class : Entity
     public DateTime EndDate { get; set; }
 
 
-    public Instructor Instructor { get; set; } = null!;
     public int InstructorId { get; set; }
 
-    public Course Course { get; set; } = null!;
     public int CourseId { get; set; }
 
-    public ICollection<Student> Students { get; set; } = null!;
+    public ICollection<Enrollment> Enrollments { get; set; } = null!;
 }

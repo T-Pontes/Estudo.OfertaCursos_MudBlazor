@@ -7,7 +7,7 @@ public interface IRepository<TEntity> where TEntity : Entity
 
     Task<TEntity> UpdateAsync(TEntity entity);
 
-    Task DeleteAsync(TEntity entity);
+    Task DeleteAsync(int id);
 
     Task<ICollection<TEntity>> GetAllAsync();
 
